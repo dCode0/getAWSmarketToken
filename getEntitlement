@@ -1,0 +1,13 @@
+import boto3
+
+marketplaceClient = boto3.client('marketplace-entitlement')
+response = marketplaceClient.get_entitlements(
+    ProductCode='string',
+    Filter={
+        'CUSTOMER_IDENTIFIER': [
+            'string',
+        ]
+    },
+    NextToken='string',
+    MaxResults=123
+)
